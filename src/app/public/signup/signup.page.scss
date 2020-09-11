@@ -1,0 +1,49 @@
+ion-content {
+    --background: #fff url("/assets/img/driver-bg.jpg") no-repeat center center / cover;
+ }
+ ion-content:after{content: ""; display: block;clear: both;background: #1717176e; position: absolute;top: 0; left: 0; right: 0; bottom: 0;}
+ion-input{font-size: 12px;}
+.login-tab{text-align: center;}
+.login-tab {
+	ion-label{
+		padding: 13px 0;
+		border-bottom: 2px solid #ffd400;
+		cursor: pointer;
+		color: #f6f6f7;
+		width: 50%;
+		border-radius: 4px 4px 0 0;
+	}
+}
+.signup-tab{
+	color: #ffd400 !important;
+    background: #fff;
+}
+
+.login-page-outer{z-index: 9;width: 100%;position: fixed;margin-top: 75px;}
+ion-thumbnail{margin-left:5px;}
+ion-card{
+	box-shadow: none;
+	background: #ffffff7d;
+	border: 1px solid #636363;
+    padding:20px 10px;
+    border-radius: 10px;
+}
+ion-input{
+	    border: 1px solid #000;
+	    border-radius: 5px;
+	    padding: 0 5px !important;
+    color: #000;
+}
+// ion-router-link{
+//     position: fixed;
+//     bottom: 5px;
+//     left: 50%;
+//     transform: translate(-50%,0);
+//     font-size: 12px;
+//     color: #f1ea2f;
+//     z-index: 99999;}
+ion-button{padding: 0 10px !important;}
+
+
+
+ /**for android**/

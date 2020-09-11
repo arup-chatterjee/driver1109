@@ -1,0 +1,83 @@
+<app-driverheader></app-driverheader>
+
+<ion-content [fullscreen]="true">
+  <app-menuone></app-menuone>
+
+  <ion-card class="profile-form-outer">
+
+    <ion-card-content class="profile-img-driver">
+      <h2 class="heading">My Profile</h2>
+
+      <img src="https://gravatar.com/avatar/dba6bae8c566f9d4041fb9cd9ada7741?d=identicon&f=y">
+      <ion-icon class="edit-icon" name="create-outline"></ion-icon>
+      <br/>
+      <ion-label class="driver-name">S Biswas</ion-label>
+    </ion-card-content>
+
+
+      
+    <ion-list class="driver-input-outer">
+      
+      <ion-label>First Name </ion-label>
+      <ion-input placeholder="First Name"></ion-input>
+    </ion-list>
+  
+    <ion-list class="driver-input-outer">
+      
+      <ion-label>Last Name </ion-label>
+      <ion-input placeholder="Last Name"></ion-input>
+    </ion-list>
+    
+    <ion-list class="driver-input-outer">
+      
+      <ion-label>Email</ion-label>
+      <ion-input placeholder="abc@gmail.com"></ion-input>
+    </ion-list>
+  
+    <ion-list class="driver-input-outer">
+      <ion-label>Phone </ion-label>
+      <ion-input placeholder="Phone" ></ion-input>
+    </ion-list>
+
+    <ion-list class="driver-input-outer">
+      <ion-label>Your Car Number</ion-label>
+      <ion-input placeholder="Car Number"></ion-input>
+    </ion-list>
+
+    <ion-list class="driver-input-outer">
+      <ion-label>Upload Id Proof</ion-label>
+      <input type="file"  #profileIdInput>
+    </ion-list>
+
+    <ion-list class="driver-input-outer">
+      <ion-label>Preferred radius in km*</ion-label>
+      <ion-input placeholder="10Km"></ion-input>
+    </ion-list>
+
+    <ion-item lines="none">
+        <ion-label>Fare</ion-label>
+          <ion-select>
+          <ion-select-option value="">Type - Testing Pourpose (0.01 per Km) </ion-select-option>
+          <ion-select-option value="">Type - C (55 per Km) </ion-select-option>
+          <ion-select-option value="">Type - B (65 per Km) </ion-select-option>
+          <ion-select-option value="">Type - A (75 per Km) </ion-select-option>
+        </ion-select>
+    </ion-item>
+
+    <ion-item lines="none">
+      <ion-checkbox slot="start" checked="true"></ion-checkbox>
+      <ion-label>Auto assign ride</ion-label>
+    </ion-item>
+
+    <ion-item lines="none">
+      <ion-checkbox slot="start" checked="true"></ion-checkbox>
+      <ion-label>Track the current location</ion-label>
+    </ion-item>
+
+    <ion-list class="driver-input-outer">
+      <ion-button class="profile-submit"  expand="block" color="warning" >Save</ion-button>
+    </ion-list>
+
+  </ion-card>
+  
+</ion-content>

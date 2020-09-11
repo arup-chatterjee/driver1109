@@ -1,0 +1,7 @@
+{
+  "name": "booboocabs-driver1",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "angular"
+}

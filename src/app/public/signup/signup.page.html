@@ -1,0 +1,62 @@
+<ion-header>
+  <ion-toolbar color="medium">
+    <ion-thumbnail slot="start">
+      <img src="assets/logo/logo-1.png" size="small" >
+    </ion-thumbnail>
+    <ion-title>Driver SignUp </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+
+  <ion-row class="login-page-outer">
+    <ion-col size="12" size-sm="10" offset-sm="1" size-md="8" offset-md="2" size-lg="6" offset-lg="3" size-xl="4"
+      offset-xl="4">
+
+          <ion-item class="login-tab" lines="none" color="light-contrast-rgb">
+            <ion-label [routerLink]="['/']">Login</ion-label>
+            <ion-label class="signup-tab" [routerLink]="['/signup']">SignUp</ion-label>
+          </ion-item>
+          
+          <ion-card>
+            <ion-item lines="none" color="light-contrast-rgb">
+              <ion-input [(ngModel)]="credentials.first_name" type="name" placeholder="First Name" name="first_name" clearInput ></ion-input>
+            </ion-item>
+            <ion-item lines="none" color="light-contrast-rgb">
+              <ion-input [(ngModel)]="credentials.last_name" type="name" placeholder="Last Name" name="last_name" clearInput ></ion-input>
+            </ion-item>
+
+            <ion-item lines="none" color="light-contrast-rgb">
+              <ion-input  [(ngModel)]="credentials.email" type="email" placeholder="Email/Username" name="email" clearInput ></ion-input>
+            </ion-item>
+
+            <ion-item lines="none" color="light-contrast-rgb">
+              <ion-input  [(ngModel)]="credentials.phone"  type="text" placeholder="Phone" name="phone" clearInput ></ion-input>
+            </ion-item>
+
+            <ion-item lines="none" color="light-contrast-rgb">
+              <ion-input [(ngModel)]="credentials.carnumber" type="text" placeholder="Your Car Number" name="email" clearInput ></ion-input>
+            </ion-item>
+
+            <ion-item lines="none" color="light-contrast-rgb">
+              <ion-input [(ngModel)]="credentials.pw" type="password" placeholder="Password" name="password"  clearInput >
+              </ion-input>
+            </ion-item>
+
+            <ion-item lines="none" color="light-contrast-rgb">
+              <ion-input [(ngModel)]="credentials.pw2" type="password" placeholder="Confirm Password" name="password"  clearInput >
+              </ion-input>
+            </ion-item>
+
+            <ion-button  (click)="register()" shape="round" expand="block" fill="outline" color="dark" >Submit</ion-button>
+            
+
+          </ion-card>
+
+    </ion-col>
+  </ion-row>      
+
+</ion-content>
+
+
+<app-driver-footer></app-driver-footer>

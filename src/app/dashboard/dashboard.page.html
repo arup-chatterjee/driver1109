@@ -1,0 +1,43 @@
+
+
+<app-driverheader></app-driverheader>
+
+<ion-content [fullscreen]="true">
+
+  <app-menuone></app-menuone>
+
+
+  <!-- fav 1 -->
+  <ion-fab (click)="presentPopover($event)" class="my-plus-fab" horizontal="end" slot="fixed">
+    <ion-icon name="information-outline"></ion-icon>
+  </ion-fab>
+    
+  <!-- fav 2 -->
+  <ion-fab (click)="presentPopover2($event)" class="my-manage-ride-fab" horizontal="end" slot="fixed">  
+    <ion-icon name="options"></ion-icon>
+  </ion-fab>
+
+  <!-- fav 3 -->
+  <ion-fab class="my-delete-fab" horizontal="end" slot="fixed">  
+    <ion-icon color="danger" name="trash-outline"></ion-icon>
+  </ion-fab>
+
+
+
+
+  <div id="myMap" style="width: 100%; height: 100%;" ></div>
+
+
+  <ion-badge class="status-info" horizontal="start">{{ status_info }}</ion-badge>
+
+  <ion-thumbnail (click)="refresh()" class="location-icon">
+    <img src="assets/icon/location-icon.png" size="small"  style="Width: 58%;  height: auto;" >
+  </ion-thumbnail>
+
+  <ion-button (click)="refresh()"  color="secondary" class="pickup-btn">
+    Refresh
+  </ion-button>
+
+
+
+</ion-content>

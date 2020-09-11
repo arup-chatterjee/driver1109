@@ -1,0 +1,14 @@
+ion-footer{
+    --ion-background-color: #4ac5e4 url("/assets/img/driver-bg-footer.jpg") no-repeat center center / cover;
+    height: 24px !important;
+    background-size: cover;
+}
+
+ion-router-link{
+    font-size: 12px;
+    color: #f1ea2f;
+    position: fixed;
+    bottom: 36px;
+    left: 50%;
+    transform: translate(-50%,0);
+}

@@ -1,0 +1,76 @@
+<!-- <p>
+  passenger-info works!
+</p> -->
+
+
+<ion-list [hidden]="!isRide"  #accepted>
+
+  <ion-item lines="none">
+    <ion-label color="dark">Passenger Information:</ion-label>
+  </ion-item>
+
+  <ion-item lines="none">
+    <ion-avatar>
+      <!-- <img src="https://gravatar.com/avatar/dba6bae8c566f9d4041fb9cd9ada7741?d=identicon&f=y"> -->
+      <img [src]="passengerImg">
+    </ion-avatar>
+    <ion-label> {{ passenger_name }} </ion-label>
+  </ion-item>
+
+  <ion-text color="tertiary" class="ion-text-left" >
+
+    <p>
+      <ion-label color="dark">Request Time: </ion-label> <span> {{ formatted_date }}</span>
+    </p>
+    <p>
+      <ion-label color="dark">Estimated Amount: </ion-label> <span> {{ this.passenger?.estimated_amount_driver }}</span>
+    </p>
+    <p>
+      <ion-label color="dark">Pickup Location Name: </ion-label> <span>{{ this.passenger?.pickup_point_local_name }}</span>
+    </p>
+    <p>
+      <ion-label color="dark">Drop Location Name: </ion-label> <span>{{ this.passenger?.drop_point_local_name }}</span>
+    </p>
+    <p>
+      <ion-label color="dark">Distance(Approx. in KM): </ion-label> <span>{{ this.passenger?.distanceInKm }}</span>
+    </p>
+    <p>
+      <ion-label color="dark">Email: </ion-label> <span> {{ passengerEmail }} </span>
+    </p>
+    <p>
+      <ion-label color="dark">Phone: </ion-label> <span>{{ phone }} </span>
+    </p>
+
+    <p class="call-outer">
+      <ion-chip outline color="primary">
+        <ion-icon name="mail"></ion-icon>
+        <ion-label>
+          <a href="mailto: {{ passengerEmail }}">Mail</a>
+        </ion-label>
+      </ion-chip>
+      
+      <ion-chip (click)="call()" outline color="success">
+        <ion-icon name="call"></ion-icon>
+        <ion-label>Call</ion-label>
+      </ion-chip>
+    </p>
+  </ion-text>
+
+</ion-list>
+
+<ion-list [hidden]="isRide" #not_accepted>
+  <div class="ion-padding custom-skeleton">
+    <ion-item lines="none">
+      <ion-label color="dark">No ride request so far! </ion-label> <span></span>
+    </ion-item>
+  </div>
+  
+  <ion-skeleton-text animated></ion-skeleton-text>
+  <ion-skeleton-text animated></ion-skeleton-text>
+  <ion-skeleton-text animated></ion-skeleton-text>
+  <ion-skeleton-text animated></ion-skeleton-text>
+  <ion-skeleton-text animated></ion-skeleton-text>
+  <ion-skeleton-text animated></ion-skeleton-text>
+  <ion-skeleton-text animated></ion-skeleton-text>
+  <ion-skeleton-text animated></ion-skeleton-text>
+</ion-list>

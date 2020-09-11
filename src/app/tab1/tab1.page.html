@@ -1,0 +1,112 @@
+<app-driverheader></app-driverheader>
+
+
+  <app-menuone></app-menuone>
+
+  <ion-content  [fullscreen]="true" >
+
+    <!-- Default Refresher        pullingIcon="chevron-down-circle-outline"  -->
+    <ion-refresher slot="fixed" (ionRefresh)="doRefresh($event)">
+      <ion-refresher-content
+      pullingText="Pull to refresh"
+      refreshingSpinner="circles"
+      refreshingText="Refreshing..."></ion-refresher-content>
+    </ion-refresher>
+
+    <div *ngIf="listOfRides?.length <= 0 ">No Info</div>
+
+    <ion-slides #slides pager="false" [options]="mySlideOptions" >
+
+      <ion-slide *ngFor="let item of listOfRides; let i = index;">
+
+
+
+        <ion-item-sliding>
+          
+            <h6 class="ride-success">Thank You!  You have completed this ride! Please manage the payment.</h6>
+  
+            <ion-list class="driver-pro-details">
+  
+              
+  
+
+              <div class="pro-img-name-outer">
+                <ion-note>
+                  <ion-avatar class="profile-img">
+                    <!-- [style.height.px]="'42'" -->
+                    <img  [src]="baseurl + item?.passenger?.user?.profile?.image">
+                  </ion-avatar>
+                </ion-note>
+                
+                <ion-note class="ion-text-right ion-text-capitalize">{{ item?.passenger?.user?.first_name }} {{ item?.passenger?.user?.last_name }}</ion-note>
+              </div>
+  
+              <div><ion-note class="ion-text-left">Email:</ion-note> <ion-note class="ion-text-right">{{ item?.passenger?.user?.email }}</ion-note> </div>
+                  
+              <div><ion-note>Phone:</ion-note> <ion-note>{{ item?.passenger?.user?.profile?.phone }}</ion-note> </div>
+              
+              <div class="ion-text-capitalize"><ion-note>Pickup Location: </ion-note> <ion-note>{{ item?.passenger?.pickup_point_local_name}}</ion-note> </div>
+              
+              <div class="ion-text-capitalize"> <ion-note>Drop Location:</ion-note> <ion-note>{{ item?.passenger?.drop_point_local_name}}</ion-note> </div>
+              
+              <div class="ion-text-capitalize"><ion-note>Distance: </ion-note> <ion-note> {{ item?.passenger?.distanceInKm}}Km</ion-note></div>
+  
+              <div class="ion-text-capitalize"> <ion-note>Ride Date: </ion-note>  <ion-note>{{ item?.passenger?.request_time | date:'MMM d, y, h:mm a' }} </ion-note> </div>
+              <div class="ion-text-capitalize">  <ion-note>Time Taken: </ion-note> <ion-note>{{ item?.timeDifference_datetime / 60 | number:'1.0-1'  }} min </ion-note></div>
+              
+
+            </ion-list>
+  
+  
+            <ion-item-divider></ion-item-divider>
+            
+          
+            <ion-item lines="none">
+              <ion-label>Total</ion-label>
+              <ion-icon class="car-icon-price" name="car" slot="end" color="warning"></ion-icon> 
+            </ion-item>
+            <ion-item lines="none" class="ion-text-right">
+              <ion-label class="ride-fare">$ {{ item?.total |number  }}</ion-label>
+            </ion-item>
+        
+            <ion-item lines="full">
+              <ion-label>Commission</ion-label>
+              <ion-label slot="end" class="ion-text-right">{{ item?.commission |number  }}</ion-label>
+            </ion-item>
+        
+            <ion-item lines="full">
+              <ion-label>Tax</ion-label>
+              <ion-label slot="end" class="ion-text-right">{{ item?.tx |number  }}</ion-label>
+            </ion-item>
+            
+            <ion-item lines="full">
+              <ion-label>Amount</ion-label>
+              <ion-label slot="end" class="ion-text-right">{{ item?.amount |number  }}</ion-label>
+            </ion-item>
+        
+            <ion-item lines="full">
+              <ion-label>Fare /Km</ion-label>
+              <ion-label slot="end" class="ion-text-right">{{ auth?.driverData?.fare  }}</ion-label>
+            </ion-item>
+            
+            <ion-item lines="full">
+              <ion-label class="ion-text-left">Payment Status</ion-label>
+              <ion-label slot="end" class="ion-text-right">{{ item?.is_paid==false ? 'Not Paid' : 'Paid'  }}</ion-label>
+            </ion-item>
+  
+            <ion-button class="ion-text-right" expand="block" color="success">Acknowledge Payment</ion-button>
+            
+            <p class="ion-text-right pagination">{{ i+1 }} of {{ listOfRides.length }} </p>
+  
+          
+        </ion-item-sliding>
+
+
+
+      </ion-slide>
+
+    </ion-slides>
+
+  </ion-content>
+
+

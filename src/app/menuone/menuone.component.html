@@ -1,0 +1,71 @@
+<ion-fab (click)="toggleMenu()" (clickOutside)="hideMenu($event)" class="my-menu-fab" horizontal="end" slot="fixed">
+  <ion-icon name="menu-sharp"></ion-icon>
+</ion-fab>
+
+<ion-list class="menu-content" [hidden]="menuHide" vertical="top" horizontal="end" slot="fixed" >
+  
+  
+  <ion-list-header lines="inset" class="profile-name-pic">
+    <ion-avatar class="menuone-userimg">
+      <img [src]="user.imgUrl">
+    </ion-avatar>
+
+    <p class="welcm-txt">
+      Welcome<br><ion-text color="success">{{ user.name }}</ion-text>
+    </p>
+   
+  </ion-list-header>
+  
+  
+    
+  <!-- <ion-item lines="none" ></ion-item> -->
+  <ion-chip >
+    <ion-icon name="location-sharp"></ion-icon>
+    <ion-label class="mnu-lbl">Current Ride &nbsp;</ion-label>
+  </ion-chip>      
+
+
+
+
+  <ion-chip >
+    <ion-icon name="car-sport-sharp"></ion-icon>
+    <ion-label class="mnu-lbl">Trck My Ride &nbsp;</ion-label>
+  </ion-chip>
+
+
+
+  <ion-chip >
+    <ion-icon name="gift"></ion-icon>
+    <ion-label class="mnu-lbl">Refer & Earn &nbsp;</ion-label>
+  </ion-chip>
+
+
+
+  <ion-chip >
+    <ion-icon name="person-circle-outline"></ion-icon>
+    <ion-label class="mnu-lbl">Profile &nbsp;</ion-label>
+  </ion-chip>
+
+
+
+  <ion-chip >
+    <ion-icon name="documents-sharp"></ion-icon>
+    <ion-label class="mnu-lbl">History &nbsp;</ion-label>
+  </ion-chip>
+
+
+
+  <ion-chip >
+    <ion-icon name="pencil-sharp"></ion-icon>
+    <ion-label class="mnu-lbl">Change Password &nbsp;</ion-label>
+  </ion-chip>
+
+
+
+  <ion-chip (click)="logout()">
+    <ion-icon name="power-outline"></ion-icon>
+    <ion-label class="mnu-lbl">Logout &nbsp;</ion-label>
+  </ion-chip>
+
+
+</ion-list>

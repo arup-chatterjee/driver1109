@@ -1,0 +1,96 @@
+<!-- <p>
+  ridestartend-info works!
+</p> -->
+<ion-list [hidden]="!isRide"  #accepted>
+  
+  <ion-item lines="none">
+    <ion-label class="ion-text-center  main-lavel" color="dark">Ride Management</ion-label>
+  </ion-item>
+
+  <ion-item lines="none" class="ion-text-center">
+    <ion-grid>
+      <ion-row>
+        <ion-col size="6">
+          <ion-chip outline color="dark" (click)="startRide()"  [class]="start_ride ? 'ride-started' : 'start-btn' " >
+            <ion-icon name="play-circle-outline"></ion-icon>
+            <ion-label>Start Ride</ion-label>
+          </ion-chip>
+          <!-- [disabled]="start_ride" 
+          <button   (click)="startRide()"  [class]="start_ride ? 'ride-started' : 'start-btn' "  >
+            <ion-label>Start Ride</ion-label>
+            <ion-icon name="play-circle-outline"></ion-icon>
+          </button>-->
+        </ion-col>
+        <ion-col  size="6">
+          <ion-chip outline color="dark" (click)="endRide()" [class]="end_ride ? 'ride-started' : 'end-btn' " >
+            <ion-icon name="stop-circle-outline"></ion-icon>
+            <ion-label>End Ride</ion-label>
+          </ion-chip>
+          
+          
+        </ion-col>
+      </ion-row>
+    </ion-grid>
+  </ion-item>
+
+  <ion-item lines="none">
+    <ion-grid>
+      <ion-row>
+
+        <ion-col size="12" class="ion-text-center">
+
+          <!-- <ion-chip outline="true">
+            <ion-icon name="car"></ion-icon>
+            <ion-label class="status-label">Status:</ion-label>
+            <ion-badge color="{{ start_ride ? 'secondary' : 'danger' }}"> Ride {{ start_ride ? 'Started' : 'Not Started' }}</ion-badge>
+          </ion-chip> -->
+          
+          <ion-chip outline="true" color="dark">
+            <ion-icon name="car"></ion-icon>
+            <ion-label class="status-label">Status:</ion-label>
+            <ion-text class="ride-txt" color="{{ start_ride ? 'success' : 'danger' }}"> Ride {{ start_ride ? 'Started' : 'Not Started' }}</ion-text>
+          </ion-chip>
+
+
+
+        </ion-col>
+
+        <ion-col size="12">
+          <small>Now: {{ formatted_currentDate }}</small>
+        </ion-col>
+
+        <ion-col size="12" [ngIf]="start_ride" >
+          <small>Start Time: {{ formatted_date_start_time }}</small>       
+        </ion-col>
+
+        <ion-col  size="12">
+          <small>Total Time: {{ diffTime }} min </small>
+        </ion-col>
+        
+        
+        <ion-col  size="12">
+          <small  class="ion-text-center alart-message" > {{ message }} </small>
+        </ion-col>
+
+      </ion-row>
+    </ion-grid>
+  </ion-item>
+
+</ion-list>
+
+<ion-list [hidden]="isRide"  #not_accepted>
+
+  <div class="ion-padding custom-skeleton">
+    <ion-item lines="none">
+      <ion-label color="dark"> No Info:</ion-label>
+    </ion-item>
+      <ion-skeleton-text animated></ion-skeleton-text>
+      <ion-skeleton-text animated></ion-skeleton-text>
+      <ion-skeleton-text animated></ion-skeleton-text>
+      <ion-skeleton-text animated></ion-skeleton-text>
+      <ion-skeleton-text animated></ion-skeleton-text>
+      <ion-skeleton-text animated></ion-skeleton-text>
+      <ion-skeleton-text animated></ion-skeleton-text>
+      <ion-skeleton-text animated></ion-skeleton-text>
+  </div>
+</ion-list>

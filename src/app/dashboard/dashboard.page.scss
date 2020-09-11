@@ -1,0 +1,46 @@
+ion-fab{
+    background: #ffffff8c;
+    border-radius: 3px;
+    font-size: 25px;
+    line-height:13px;
+    padding: 6px;
+    justify-content: center;
+    cursor: pointer;}
+.my-plus-fab{margin-top: 55px;}
+.my-manage-ride-fab{margin-top: 100px;}
+
+.my-delete-fab{    
+    position: absolute;
+    top: 62%;
+    right: 10px;
+    width: 50px;
+    height: 50px;
+    text-align: center;
+    line-height: 42px;
+    background: rgba(255, 255, 255, 0.342);
+    cursor: pointer;
+    z-index: 999;
+    border-radius: 100%;}
+.status-info{
+    background: rgba(255, 255, 255, 0.472);
+    padding:8px 30px;
+    border-radius: 24px;
+    bottom: 20%;
+    z-index: 999;
+    position: absolute;
+    color: #f3a518;
+    left: 10px;
+}
+
+
+.pickup-btn{margin: 0; display: block;position: absolute;z-index: 999;
+    left: 0; right: 0; bottom: 50px;height: 55px;}
+
+.location-icon{position: absolute; top: 70%; right: 10px; width: 50px; 
+    height: 50px;text-align: center; line-height: 67px; background: rgba(255, 255, 255, 0.411);
+    cursor: pointer;z-index: 999;border-radius: 100%}
+
+.md{
+
+    .pickup-btn{bottom: 59px;}
+}

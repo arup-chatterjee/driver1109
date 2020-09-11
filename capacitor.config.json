@@ -1,0 +1,13 @@
+{
+  "appId": "com.booboocabs.com.ionic.driver",
+  "appName": "booboocabs-driver",
+  "bundledWebRuntime": false,
+  "npmClient": "npm",
+  "webDir": "www",
+  "plugins": {
+    "SplashScreen": {
+      "launchShowDuration": 0
+    }
+  },
+  "cordova": {}
+}

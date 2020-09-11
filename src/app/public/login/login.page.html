@@ -1,0 +1,50 @@
+<ion-header>
+  <ion-toolbar color="medium">
+    <ion-thumbnail slot="start">
+      <img src="assets/logo/logo-1.png" size="small" >
+    </ion-thumbnail>
+    <ion-title>Driver Login </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+
+<ion-content [fullscreen]="true">
+ 
+  <ion-row class="login-page-outer">
+    <ion-col size="12" size-sm="10" offset-sm="1" size-md="8" offset-md="2" size-lg="6" offset-lg="3" size-xl="4"
+      offset-xl="4">
+
+        <!-- <ion-thumbnail>
+         <img src="assets/logo/logo-1.png">
+        </ion-thumbnail> -->
+
+        <ion-item class="login-tab" lines="none" color="light-contrast-rgb">
+          <ion-label class="signin-tab" [routerLink]="['']">Login</ion-label>
+          <ion-label [routerLink]="['/signup']">SignUp</ion-label>
+        </ion-item>
+ 
+        <ion-card>
+ 
+          <ion-card-content class="input-box">
+            
+            <ion-input [(ngModel)]="credentials.email" type="email" placeholder="Email" name="email" clearInput ></ion-input>
+          </ion-card-content>
+ 
+          <ion-card-content class="input-box">
+            <ion-input  [(ngModel)]="credentials.pw"  type="password" placeholder="Password" name="password" clearInput >
+            </ion-input>
+          </ion-card-content>
+ 
+          <ion-button (click)="login()" shape="round" expand="block" fill="outline" color="dark" >Login</ion-button>
+          
+ 
+        </ion-card>
+      
+ 
+    </ion-col>
+  </ion-row>
+  
+  <!-- <ion-router-link (click)="goToTnC()" class="underline" vertical="bottom" horizontal="center">Terms & Conditions</ion-router-link> -->
+</ion-content>
+
+<app-driver-footer></app-driver-footer>

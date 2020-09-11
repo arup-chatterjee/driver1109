@@ -1,0 +1,37 @@
+.profile-form-outer{    border: 1px solid #ccc;
+    box-shadow: 0px 0px 10px #a2a2a2a3;}
+.profile-img-driver{
+	text-align: center;
+	padding: 0;
+}
+.profile-img-driver{
+	.heading{
+		margin: 0 0 15px 0;
+    padding: 15px 0;
+    background: #ffc409;
+    color: #000;
+	}
+}
+
+.profile-img-driver{
+	
+		img{
+		width: 100px;
+    height: 100px;
+    border-radius: 100%;
+		}
+	
+}
+.driver-name{font-size: 20px;
+			color: #000;
+			}
+.driver-input-outer{padding-right: 15px;
+	padding-left: 15px;color: #000;
+			}
+.driver-input-outer{
+	ion-input{
+		border-radius: 5px;
+		border: 1px solid #ccc;
+		margin-top: 5px;
+	}
+}

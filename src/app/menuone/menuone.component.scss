@@ -1,0 +1,46 @@
+.my-menu-fab{margin-top: 10px;}
+
+.menu-content{
+    z-index: 9999;
+    width: 100%;
+    padding: 0 7px 5px;
+    position: absolute;
+}
+.my-menu-fab{
+        cursor: pointer;
+        background: #ffffff94;
+        color: #353535;
+        padding: 6px;
+        border-radius: 4px;
+        line-height: 13px;
+        font-size: 25px;
+        position: fixed;
+        z-index: 99999; 
+}
+
+.profile-name-pic{padding:0;}
+.profile-name-pic{
+
+    .menuone-userimg{height: 30px; width: 30px; margin-right: 5px;}
+}
+
+    ion-chip{
+        background: #ddd;
+        margin: 7px 0;
+        display: flex;
+        padding: 3px 10px;
+        align-items: center;
+        width: 100%;
+        }
+
+
+
+
+.ios{
+    .profile-name-pic{
+        align-items: center;
+    }
+    .welcm-txt{
+        font-size: 13px;
+    }
+}
